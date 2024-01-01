@@ -17,7 +17,10 @@
     <div id="app">
         <header class="container">            
             <nav>
-                <img class="logo" title="fotoblog logo" src="assets/camera.svg" alt="ícone de uma camera da cor preta">
+                <div class="logo-container">
+                    <img onclick="changeColors()" class="logo" title="fotoblog logo" src="assets/camera.svg" alt="ícone de uma camera da cor preta">
+                    <div class="tooltip">Mudar cores</div>
+                </div>
 
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -155,5 +158,14 @@
             <p>© 2023 - Rocketseat Explorer</p>
         </footer>
     </div>
+
+    <script>
+        function changeColors() {
+            let hue = Math.random() * 360;
+            let saturation = 60;
+            document.documentElement.style.setProperty('--hue', hue);
+            document.documentElement.style.setProperty('--saturation', `${saturation}%`);
+        }
+    </script>
 </body>
 </html>
