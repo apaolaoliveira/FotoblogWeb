@@ -26,7 +26,7 @@ body {
 
 #app {
     display: grid;
-    grid-template-rows: max-content 1fr max-content; /* max-content se ajusta de acordo com o conteúdo*/ 
+    grid-template-rows: max-content 1fr max-content; /* max-content se ajusta de acordo com o conteúdo */ 
     height: 100vh;
 }
 
@@ -121,6 +121,7 @@ main h1 {
 .item img {
     width: 100%;
     aspect-ratio: 16/9; /* proporção -> largura/altura */
+    display: block;
     object-fit: cover;
 
     /* transition-property: transform; -> falo qual a propriedade que vou aplicar a transição, pode colocar para todas `all`
@@ -128,11 +129,12 @@ main h1 {
     transition-delay: 0;
     transition-timing-function: ease-out; */
 
-    transition: all 300ms ease-out;
+    transition: all 300ms ease-out; /* shorthand */
 }
 
 .item img:hover {
-    filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+    filter: hue-rotate(7deg) contrast(101%) saturate(200%); 
+    /* filter -> 7deg na matriz do circulo de cores, aumenta um pouco o contraste e a saturação (100% para cima aumenta e 100% para baixo diminui) */
     transform: scale(1.1) rotate(-2deg);
 }
 

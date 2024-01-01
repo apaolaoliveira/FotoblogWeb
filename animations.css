@@ -1,0 +1,33 @@
+
+header {
+    --startY: -100%;
+    animation: move .3s;
+}
+
+footer {
+    --startY: 100%;
+    animation: move .3s;
+}
+
+
+@keyframes move {
+    from {
+        transform: translateY(-100%);
+    }
+}
+
+.item {
+    --delay: .4s;
+    animation: appear .4s var(--delay) backwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
